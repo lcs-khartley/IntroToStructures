@@ -33,7 +33,7 @@ import Foundation
  */
 // Begin your work here...
 
-// Circle
+// Describe Circle
 
 struct Circle {
     // Properties
@@ -56,11 +56,101 @@ struct Circle {
     
 }
 
+//
+// Make circle
+var circle = Circle(radius: 5.5)
+print (circle.returnCircle)
+
+
+// Describe Parallelogram
+
+struct Parallelogram {
+    // Properties
+    var base: Double
+    var height: Double
+    var side: Double
+    
+    // Computed property for perimeter
+    var perimeterParallelogram: Double {
+        return 2*(base+side)
+    }
+    
+    // Computed property for area
+    var areaParallelogram: Double {
+        return base*height
+    }
+    
+    // Return description
+    var returnParallelogram: String {
+        return "The area of the parallelogram is " + String(format: "%.2f", areaParallelogram) + " and the perimeter is " + String(format: "%.2f", perimeterParallelogram)
+    }
+    
+}
+
+// Make circle
+var parallelogram = Parallelogram(base: 3.4, height: 5.5, side: 7.6)
+print (parallelogram.returnParallelogram)
+
+//
+// Describe Cone
+
+struct Cone {
+    // Properties
+    var radius: Double
+    var height: Double
+    var side: Double
+    
+    // Computed property for perimeter of the cone
+    var areaCone: Double {
+        return (Double.pi*pow(radius, 2.0))+(Double.pi*radius*side)
+    }
+    
+    // Computed property for area of the cone
+    var volumeCone: Double {
+        return (Double.pi*pow(radius,3.0)*height)/3
+    }
+    
+    // Return cone description
+    var returnCone: String {
+        return "The area of the cone is " + String(format: "%.2f", areaCone) + " and the volume is " + String(format: "%.2f", volumeCone)
+    }
+    
+}
+
 // Make circle
 
-var circle = Circle(radius: 5.5)
+var cone = Cone(radius: 2.1, height: 5.0, side: 4.3)
 
-print (circle.returnCircle)
+print (cone.returnCone)
+
+//// Circle
+//
+//struct Circle {
+//    // Properties
+//    var radius: Double
+//    
+//    // Computed property for perimeter
+//    var perimeterCircle: Double {
+//        return 2*Double.pi*radius
+//    }
+//    
+//    // Computed property for area
+//    var areaCircle: Double {
+//        return Double.pi*pow(radius,2.0)
+//    }
+//    
+//    // Return description
+//    var returnCircle: String {
+//        return "The area of the circle is " + String(format: "%.2f", areaCircle) + " and the perimeter is " + String(format: "%.2f", perimeterCircle)
+//    }
+//    
+//}
+//
+//// Make circle
+//
+//var circle = Circle(radius: 5.5)
+//
+//print (circle.returnCircle)
 /*:
  [Previous: Area Example - Rectangle](@previous) | Page 4
  */
