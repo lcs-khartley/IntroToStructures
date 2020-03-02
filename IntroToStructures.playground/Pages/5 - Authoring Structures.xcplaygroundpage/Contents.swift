@@ -33,8 +33,34 @@ import Foundation
  */
 // Begin your work here...
 
+// Circle
 
+struct Circle {
+    // Properties
+    var radius: Double
+    
+    // Computed property for perimeter
+    var perimeterCircle: Double {
+        return 2*Double.pi*radius
+    }
+    
+    // Computed property for area
+    var areaCircle: Double {
+        return Double.pi*pow(radius,2.0)
+    }
+    
+    // Return description
+    var returnCircle: String {
+        return "The area of the circle is " + String(format: "%.2f", areaCircle) + " and the perimeter is " + String(format: "%.2f", perimeterCircle)
+    }
+    
+}
 
+// Make circle
+
+var circle = Circle(radius: 5.5)
+
+print (circle.returnCircle)
 /*:
  [Previous: Area Example - Rectangle](@previous) | Page 4
  */

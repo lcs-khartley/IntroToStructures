@@ -58,7 +58,7 @@ struct Rectangle {
 }
 
 // Create a rectangle instance
-var someRectangle = Rectangle(length: 10, width: 4)
+var someRectangle = Rectangle(length: 10, width: 4.456789)
 
 // What is the area?
 someRectangle.area
